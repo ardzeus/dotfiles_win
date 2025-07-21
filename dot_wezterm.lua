@@ -1,10 +1,10 @@
 local wezterm = require("wezterm")
-local kanso_zen = require("kanso-zen")
+local kanso_ink = require("kanso-ink")
 
 return {
-  -- color_scheme = "kanso-zen",
-  colors = kanso_zen.colors,
-  default_prog = { "wsl.exe", "~", "zsh" },
+  -- color_scheme = "kanso-ink",
+  colors = kanso_ink.colors,
+  default_prog = { "wsl.exe", "~" },
   font = wezterm.font("JetBrainsMonoNL Nerd Font", {weight="Regular"}),
   font_size = 10.0,
   enable_tab_bar = true,
@@ -12,7 +12,7 @@ return {
   default_cursor_style = "BlinkingBar",
 
   -- Launcher Menu Configuration
-  launch_menu = {
+    launch_menu = {
     {
       set_environment_variables = { WEZTERM_TAB_TITLE = 'Rauman VM' },
       label = 'Rauman VM',
@@ -41,22 +41,5 @@ return {
       mods = 'CTRL|SHIFT',
       action = wezterm.action.ShowLauncherArgs({ flags = 'FUZZY|LAUNCH_MENU_ITEMS' }),
     },
-    {
-      key = 'LeftArrow',
-      mods = 'CTRL|SHIFT',
-      action = wezterm.action.ActivateTabRelative(-1),
-    },
-    {
-      key = 'RightArrow',
-      mods = 'CTRL|SHIFT',
-      action = wezterm.action.ActivateTabRelative(1),
-    },
-    {
-      key = 'Enter',
-      mods = 'ALT',
-      action = wezterm.action.ToggleFullScreen,
-    },
-    -- { key = 'V', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
-    -- { key = 'V', mods = 'CTRL', action = act.PasteFrom 'PrimarySelection' },
   },
 }
