@@ -1,12 +1,12 @@
 local wezterm = require("wezterm")
-local kanso_ink = require("kanso-ink")
+local kanso_ink = require("kanagawa")
 
 return {
   -- color_scheme = "kanso-ink",
   colors = kanso_ink.colors,
   default_prog = { "wsl.exe", "~" },
   font = wezterm.font("JetBrainsMonoNL Nerd Font", {weight="Regular"}),
-  font_size = 10.0,
+  font_size = 9.5,
   enable_tab_bar = true,
   --disable_default_key_bindings = true,
   default_cursor_style = "BlinkingBar",
